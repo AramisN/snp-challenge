@@ -36,7 +36,7 @@ Given the CSV files, you are expected to implement the following steps:
 
 🚩3. Transfer data from oltp\_db to dwh\_db using SQL queries.
 
-🟢**Answer**: we can do it using psql dump or just exporting tables with SQL format, tansfer it into temp tables and after doing transformation and data cleaning we can create the tables we want and change it to the names we desire. If the size of tables is big, doing it with a processing engines like spark will be preferred (bonus: I will upload an ETL job that will get these data from S3 and create a cube and it will be far easier than using SQL)
+🟢**Answer**: we can do it using psql dump or just exporting tables with SQL format, tansfer it into temp tables and after doing transformation and data cleaning we can create the tables we want and change it to the names we desire. If the size of tables is big, doing it with a processing engines like spark will be preferred (❤️bonus: I will upload an ETL job that will get these data from S3 and create a cube and it will be far easier than using SQL (etl_spark_minio_to_make_cube.py))
 
 💎Sql files:
 
