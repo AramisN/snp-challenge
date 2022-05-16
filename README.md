@@ -8,7 +8,8 @@ First, you should transfer data from **oltp\_db** to a data warehouse with the S
 Given the CSV files, you are expected to implement the following steps:
 
 1. Load CSV files in a Postgresql Database named oltp\_db.
-
+![alt text](https://github.com/AramisN/snp-challenge/blob/main/11111.png)
+![alt text](https://github.com/AramisN/snp-challenge/blob/main/22222.png)
 
 
 
@@ -43,6 +44,7 @@ migration\_oltp\_to\_dwh.sql
 
 transform\_dwh\_to\_star\_and\_clean\_data.sql
 
+![alt text](https://github.com/AramisN/snp-challenge/blob/main/333333.png)
 
 
 **Notes on data**: the dataset provided has many issues:
