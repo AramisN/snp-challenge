@@ -19,7 +19,7 @@ Given the CSV files, you are expected to implement the following steps:
 
 1. Create a Postgresql database named dwh\_db with stars schema using SQL queries.
 
-+**Answer**: to make oltp\_data become star, we can just combine two facts and make it one fact table (view, if we use same database, table if we have dwh\_db). 
+🟢**Answer**: to make oltp\_data become star, we can just combine two facts and make it one fact table (view, if we use same database, table if we have dwh\_db). 
 
 **create** **view** fact\_allorder  **as** 
 
@@ -36,7 +36,7 @@ Given the CSV files, you are expected to implement the following steps:
 
 1. Transfer data from oltp\_db to dwh\_db using SQL queries.
 
-+**Answer**: we can do it using psql dump or just exporting tables with SQL format, tansfer it into temp tables and after doing transformation and data cleaning we can create the tables we want and change it to the names we desire. If the size of tables is big, doing it with a processing engines like spark will be preferred (bonus: I will upload an ETL job that will get these data from S3 and create a cube and it will be far easier than using SQL)
+🟢**Answer**: we can do it using psql dump or just exporting tables with SQL format, tansfer it into temp tables and after doing transformation and data cleaning we can create the tables we want and change it to the names we desire. If the size of tables is big, doing it with a processing engines like spark will be preferred (bonus: I will upload an ETL job that will get these data from S3 and create a cube and it will be far easier than using SQL)
 
 Sql files:
 
@@ -60,7 +60,7 @@ Given a data warehouse you should answer the following question:
 
 1. What is the average order price per customer?
 
-+**Answer**: 
+🟢**Answer**: 
 
 cust\_id |   avg\_price         
 
@@ -78,13 +78,13 @@ query provided in ‘reports.sql’ file
 
 1. How many ‘Vacuum cleaners’ were ordered in New York? Ans who bought most of them in this city? 
 
-**Answer**: ‘Vacuum cleaners’ as mentioned in quote, doesn’t exist. But ‘Vacuum cleaner’ was mostly bought by ‘Jones’
+🟢**Answer**: ‘Vacuum cleaners’ as mentioned in quote, doesn’t exist. But ‘Vacuum cleaner’ was mostly bought by ‘Jones’
 
 query provided in ‘reports.sql’ file
 
 1. What product is the most popular in each city?
 
-**Answer:**
+🟢**Answer:**
 
 cust\_city    |product\_name  |
 
