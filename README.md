@@ -7,7 +7,7 @@ First, you should transfer data from **oltp\_db** to a data warehouse with the S
 
 Given the CSV files, you are expected to implement the following steps:
 
-1. Load CSV files in a Postgresql Database named oltp\_db.
+🚩1. Load CSV files in a Postgresql Database named oltp\_db.
 ![alt text](https://github.com/AramisN/snp-challenge/blob/main/11111.png)
 ![alt text](https://github.com/AramisN/snp-challenge/blob/main/22222.png)
 
@@ -17,7 +17,7 @@ Given the CSV files, you are expected to implement the following steps:
 
 
 
-1. Create a Postgresql database named dwh\_db with stars schema using SQL queries.
+🚩2. Create a Postgresql database named dwh\_db with stars schema using SQL queries.
 
 🟢**Answer**: to make oltp\_data become star, we can just combine two facts and make it one fact table (view, if we use same database, table if we have dwh\_db). 
 
@@ -34,20 +34,20 @@ Given the CSV files, you are expected to implement the following steps:
 )
 
 
-1. Transfer data from oltp\_db to dwh\_db using SQL queries.
+🚩3. Transfer data from oltp\_db to dwh\_db using SQL queries.
 
 🟢**Answer**: we can do it using psql dump or just exporting tables with SQL format, tansfer it into temp tables and after doing transformation and data cleaning we can create the tables we want and change it to the names we desire. If the size of tables is big, doing it with a processing engines like spark will be preferred (bonus: I will upload an ETL job that will get these data from S3 and create a cube and it will be far easier than using SQL)
 
-Sql files:
+💎Sql files:
 
-migration\_oltp\_to\_dwh.sql
+🟦migration\_oltp\_to\_dwh.sql
 
-transform\_dwh\_to\_star\_and\_clean\_data.sql
+🟦transform\_dwh\_to\_star\_and\_clean\_data.sql
 
 ![alt text](https://github.com/AramisN/snp-challenge/blob/main/333333.png)
 
 
-**Notes on data**: the dataset provided has many issues:
+🟡**Notes on data**: the dataset provided has many issues:
 
 1. Datamodel is not provided, so It will be a guessing game + finding correlation using fact tables
 1. Seems like the transaction software is failing to update old records and just inserts data(happened for customer table and products like vacuum cleaner)
@@ -58,7 +58,7 @@ transform\_dwh\_to\_star\_and\_clean\_data.sql
 
 Given a data warehouse you should answer the following question:
 
-1. What is the average order price per customer?
+🚩1. What is the average order price per customer?
 
 🟢**Answer**: 
 
@@ -74,15 +74,15 @@ cust\_id |   avg\_price
 
 `      `4|             48.99|
 
-query provided in ‘reports.sql’ file
+💎query provided in ‘reports.sql’ file
 
-1. How many ‘Vacuum cleaners’ were ordered in New York? Ans who bought most of them in this city? 
+🚩2. How many ‘Vacuum cleaners’ were ordered in New York? Ans who bought most of them in this city? 
 
 🟢**Answer**: ‘Vacuum cleaners’ as mentioned in quote, doesn’t exist. But ‘Vacuum cleaner’ was mostly bought by ‘Jones’
 
-query provided in ‘reports.sql’ file
+💎query provided in ‘reports.sql’ file
 
-1. What product is the most popular in each city?
+🚩3. What product is the most popular in each city?
 
 🟢**Answer:**
 
@@ -100,6 +100,6 @@ New York     |Cleaner bags  |
 
 San Francisco|Vacuum cleaner|
 
-query provided in ‘reports.sql’ file
+💎query provided in ‘reports.sql’ file
 
 
